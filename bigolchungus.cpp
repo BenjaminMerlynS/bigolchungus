@@ -75,7 +75,7 @@ int main(int argc, char* const* argv) {
 
 
     //std::chrono::steady_clock::time_point t_start = std::chrono::high_resolution_clock::now();
-    std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
+    std::chrono::steady_clock::time_point t_start = std::chrono::steady_clock::now();
 
     bool quiet = true;
     int deviceOverride = 0;
@@ -206,7 +206,8 @@ int main(int argc, char* const* argv) {
                 exit(-1);
             }
 
-            std::chrono::steady_clock::time_point t_end = std::chrono::high_resolution_clock::now();
+            std::chrono::steady_clock::time_point t_end = std::chrono::steady_clock::now()
+
             float milliseconds = std::chrono::duration<double, std::milli>(t_end-t_start).count();
             uint64_t numHashes = steps * nonce_step_size;
             double rate = numHashes / (milliseconds / 1000.0);
