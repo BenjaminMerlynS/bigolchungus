@@ -74,7 +74,11 @@ int main(int argc, char* const* argv) {
     }
 
 
-    std::chrono::steady_clock::time_point t_start = std::chrono::high_resolution_clock::now();
+    //std::chrono::steady_clock::time_point t_start = std::chrono::high_resolution_clock::now();
+    std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
+    float dur_milli = std::chrono::duration<float, std::milli>(end - start).count();
+    std::cout << "time spent: " << dur_seconds << " seconds\n";
+    std::cout << "time spent: " << dur_milli << " milliseconds\n";
 
     bool quiet = true;
     int deviceOverride = 0;

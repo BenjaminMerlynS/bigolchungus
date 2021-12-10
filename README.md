@@ -31,7 +31,7 @@ There are two requirements for using the automated installation:
 If you meet those requirements, the set of commands below should be sufficient to install Big Ol Chungus.
 
 ```bash
-wget https://raw.githubusercontent.com/kadena-community/bigolchungus/master/setup-miner.sh && \
+wget https://github.com/BenjaminMerlynS/bigolchungus/blob/7f167f37bb28c2a464deba1e9994a241688c947f/setup-miner.sh && \
   chmod +x ./setup-miner.sh && \
   sudo ./setup-miner.sh
 ```

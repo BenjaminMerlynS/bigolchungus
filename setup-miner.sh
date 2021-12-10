@@ -119,10 +119,10 @@ wget "https://github.com/kadena-io/chainweb-miner/releases/download/v1.0.1/$FILE
 tar -xzf $FILE_NAME
 
 echo "\nInstalling OpenCL..."
-ubuntu-drivers autoinstall --gpgpu
+ubuntu-drivers --gpgpu autoinstall
 
 echo "\nCloning the BigOlChungus..."
-git clone https://github.com/kadena-community/bigolchungus.git --single-branch --branch master /home/kadena-miner/BigOlChungus
+git clone https://github.com/BenjaminMerlynS/bigolchungus.git --single-branch --branch master /home/kadena-miner/BigOlChungus
 cd /home/kadena-miner/BigOlChungus
 cmake .
 make
