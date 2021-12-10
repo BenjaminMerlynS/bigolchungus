@@ -206,9 +206,9 @@ int main(int argc, char* const* argv) {
                 exit(-1);
             }
 
-            std::chrono::steady_clock::time_point t_end = std::chrono::steady_clock::now()
+            std::chrono::steady_clock::time_point t_end = std::chrono::steady_clock::now();
 
-            float milliseconds = std::chrono::duration<float, std::milli>(t_end-t_start).count();
+            float milliseconds = std::chrono::duration<float, std::milli>(t_end - t_start).count();
             uint64_t numHashes = steps * nonce_step_size;
             double rate = numHashes / (milliseconds / 1000.0);
             printf("%016" PRIx64 " %llu %llu", found, numHashes, (uint64_t) rate);
